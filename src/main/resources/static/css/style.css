@@ -1,0 +1,154 @@
+html, body {
+    height: 100% !important;
+}
+
+@font-face {
+    font-family: blogger-light;
+    src: url('/webfonts/BloggerSans-Light.ttf');
+}
+
+@font-face {
+    font-family: blogger-medium;
+    src: url('/webfonts/BloggerSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: blogger-bold;
+    src: url('/webfonts/BloggerSans-Bold.ttf');
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.container-fluid {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+
+.main-header {
+    width: 20%;
+    height: 100%;
+}
+
+.vertical-center-main-content {
+    width: 80%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+}
+
+.main-content {
+    width: 80%;
+    height: 100%;
+}
+
+.bg-sv {
+    background-color: #191970;
+}
+
+.text-sv {
+    color: #191970;
+}
+
+.btn-sv {
+    background-color: #191970;
+    color: #FFFFFF;
+    font-family: blogger-bold;
+}
+
+.font-blogger-bold {
+    font-family: blogger-bold;
+}
+
+.font-blogger-light {
+    font-family: blogger-light;
+}
+
+.navigation-bar {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 0;
+}
+
+.navigation-bar .navigation-bar-brand {
+    font-family: blogger-bold;
+}
+
+.navbar-list {
+
+}
+
+.navbar-list-element {
+    font-size: 24px;
+    font-family: blogger-light;
+}
+
+.navbar-list-element a {
+    color: white;
+}
+
+.navbar-list-element a:hover {
+    text-decoration: none;
+}
+
+.hr-2 {
+    height: 2px;
+}
+
+.navbar-list-element {
+    font-size: 24px;
+}
+
+.custom-hover-finished {
+    font-family: blogger-light;
+}
+
+.custom-hover-in {
+    font-family: blogger-bold;
+}
+
+.custom-hover-out {
+    animation-name: hover-animation;
+    animation-duration: 4s;
+}
+
+@keyframes hover-animation {
+    0%   {font-family: blogger-bold;}
+    50%  {font-family: blogger-medium;}
+    100% {font-family: blogger-light;}
+}
+
+.blur-1 {
+    opacity: 0.9;
+}
+
+.blur-2 {
+    opacity: 0.6;
+}
+
+.blur-3 {
+    opacity: 0.5;
+}

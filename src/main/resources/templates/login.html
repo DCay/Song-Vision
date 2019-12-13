@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head"></th:block>
+</head>
+<body>
+<div class="container-fluid d-flex justify-content-between">
+    <th:block th:replace="fragments/navbar"></th:block>
+    <main class="vertical-center-main-content">
+        <div class="login-content w-100 mb-5 pb-5">
+            <h1 class="text-center text-sv font-blogger-bold">Login</h1>
+            <hr class="hr-2 bg-sv w-50"/>
+            <form class="form mx-auto mt-4" th:action="@{/users/login}" th:method="post">
+                <div class="form-group w-25 mx-auto">
+                    <div class="d-flex justify-content-center text-sv font-blogger-bold">
+                        <label for="username">Username</label>
+                    </div>
+                    <input type="text" class="form-control text-sv font-blogger-bold pt-2" id="username"
+                           name="username" placeholder="Username..."/>
+                </div>
+                <div class="form-group w-25 mx-auto">
+                    <div class="d-flex justify-content-center text-sv font-blogger-bold">
+                        <label for="password">Password</label>
+                    </div>
+                    <input type="password" class="form-control text-sv font-blogger-bold pt-2" id="password"
+                           name="password" placeholder="Password..."/>
+                </div>
+                <hr class="hr-2 bg-sv w-50 mt-5"/>
+                <div class="button-holder d-flex justify-content-center mt-4">
+                    <button class="btn btn-sv">Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+<script th:src="@{/js/custom-navbar-hover.js}"></script>
+</body>
+</html>

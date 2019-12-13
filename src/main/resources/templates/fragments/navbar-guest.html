@@ -1,0 +1,24 @@
+<th:block th:fragment="navbar-guest">
+    <header class="main-header">
+        <nav class="navigation-bar bg-sv">
+            <div class="navigation-bar-brand mt-3 d-flex justify-content-center">
+                <h2 class="text-white">Song Vision</h2>
+            </div>
+            <hr class="hr-2 mt-0 bg-white w-85">
+            <ul class="navbar-list ml-4 mt-4">
+                <li class="navbar-list-element">
+                    <a th:href="@{/}">Home</a>
+                </li>
+                <li class="navbar-list-element">
+                    <a th:href="@{/users/login}">Login</a>
+                </li>
+                <li class="navbar-list-element">
+                    <a th:href="@{/users/register}">Register</a>
+                </li>
+                <li class="navbar-list-element">
+                    <a th:href="@{/about}">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</th:block>

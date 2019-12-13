@@ -1,20 +1,15 @@
-package org.ebia.songvision.data.entities;
+package org.ebia.songvision.business.models;
 
-import org.springframework.security.core.userdetails.UserDetails;
-
-import javax.persistence.*;
 import java.util.Set;
 
-@Entity
-@Table(name = "users")
-public class User extends BaseEntity implements UserDetails {
+public class UserServiceModel extends BaseServiceModel {
     private String username;
 
     private String password;
 
     private String email;
 
-    private Set<UserAuthority> authorities;
+    private Set<UserAuthorityServiceModel> authorities;
 
     private boolean isAccountNonExpired;
 
@@ -24,11 +19,9 @@ public class User extends BaseEntity implements UserDetails {
 
     private boolean isEnabled;
 
-    public User() {
+    public UserServiceModel() {
     }
 
-    @Override
-    @Column(name = "username", nullable = false, unique = true)
     public String getUsername() {
         return this.username;
     }
@@ -37,8 +30,6 @@ public class User extends BaseEntity implements UserDetails {
         this.username = username;
     }
 
-    @Override
-    @Column(name = "password", nullable = false)
     public String getPassword() {
         return this.password;
     }
@@ -47,7 +38,6 @@ public class User extends BaseEntity implements UserDetails {
         this.password = password;
     }
 
-    @Column(name = "email", nullable = false, unique = true)
     public String getEmail() {
         return this.email;
     }
@@ -56,46 +46,40 @@ public class User extends BaseEntity implements UserDetails {
         this.email = email;
     }
 
-    @Override
-    @ManyToMany(targetEntity = UserAuthority.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    public Set<UserAuthority> getAuthorities() {
+    public Set<UserAuthorityServiceModel> getAuthorities() {
         return this.authorities;
     }
 
-    public void setAuthorities(Set<UserAuthority> authorities) {
+    public void setAuthorities(Set<UserAuthorityServiceModel> authorities) {
         this.authorities = authorities;
     }
 
-    @Override
     public boolean isAccountNonExpired() {
-        return true;
+        return this.isAccountNonExpired;
     }
 
     public void setAccountNonExpired(boolean accountNonExpired) {
         isAccountNonExpired = accountNonExpired;
     }
 
-    @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return this.isAccountNonLocked;
     }
 
     public void setAccountNonLocked(boolean accountNonLocked) {
         isAccountNonLocked = accountNonLocked;
     }
 
-    @Override
     public boolean isCredentialsNonExpired() {
-        return true;
+        return this.isCredentialsNonExpired;
     }
 
     public void setCredentialsNonExpired(boolean credentialsNonExpired) {
         isCredentialsNonExpired = credentialsNonExpired;
     }
 
-    @Override
     public boolean isEnabled() {
-        return true;
+        return this.isEnabled;
     }
 
     public void setEnabled(boolean enabled) {

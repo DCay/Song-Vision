@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:replace="fragments/head"></th:block>
+</head>
+<body>
+<div class="container-fluid d-flex justify-content-between">
+    <th:block th:replace="fragments/navbar"></th:block>
+    <main class="vertical-center-main-content">
+        <div class="register-content w-100">
+            <h1 class="text-center text-sv font-blogger-bold">Register</h1>
+            <hr class="hr-2 bg-sv w-50"/>
+            <form class="form mx-auto mt-4" th:action="@{/users/register}" th:method="post">
+                <div class="form-group w-25 mx-auto">
+                    <div class="d-flex justify-content-center text-sv font-blogger-bold">
+                        <label for="username">Username</label>
+                    </div>
+                    <input type="text" class="form-control text-sv font-blogger-bold pt-2" id="username"
+                           name="username" placeholder="Username..."/>
+                </div>
+                <div class="form-group w-25 mx-auto">
+                    <div class="d-flex justify-content-center text-sv font-blogger-bold">
+                        <label for="password">Password</label>
+                    </div>
+                    <input type="password" class="form-control text-sv font-blogger-bold pt-2" id="password"
+                           name="password" placeholder="Password..."/>
+                </div>
+                <div class="form-group w-25 mx-auto">
+                    <div class="d-flex justify-content-center text-sv font-blogger-bold">
+                        <label for="confirm-password">Confirm Password</label>
+                    </div>
+                    <input type="password" class="form-control text-sv font-blogger-bold pt-2" id="confirm-password"
+                           name="confirmPassword" placeholder="Confirm Password..."/>
+                </div>
+                <div class="form-group w-25 mx-auto">
+                    <div class="d-flex justify-content-center text-sv font-blogger-bold">
+                        <label for="email">Email</label>
+                    </div>
+                    <input type="email" class="form-control text-sv font-blogger-bold pt-2" id="email"
+                           name="email" placeholder="Email..."/>
+                </div>
+                <hr class="hr-2 bg-sv w-50 mt-5"/>
+                <div class="button-holder d-flex justify-content-center mt-4">
+                    <button class="btn btn-sv">Register</button>
+                </div>
+                <hr class="hr-2 bg-sv w-50 mt-4"/>
+                <h5 class="font-blogger-light text-center text-sv mt-3"><a class="font-blogger-bold" href="">Login</a> if you already have an account.</h5>
+                <hr class="hr-2 bg-sv w-50 mt-3"/>
+            </form>
+        </div>
+    </main>
+</div>
+<script th:src="@{/js/custom-navbar-hover.js}"></script>
+</body>
+</html>
